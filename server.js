@@ -1,4 +1,5 @@
 // mongolab-pointy-89515
+// mongodb://heroku_42k48nrx:bggrrv7f9lokjf56fmecks397v@ds133192.mlab.com:33192/heroku_42k48nrx
 
 // Dependencies
 var express = require("express");
@@ -28,7 +29,8 @@ app.use(bodyParser.urlencoded({
 app.use(express.static("public"));
 
 // Database configuration with mongoose
-mongoose.connect("mongodb: mongolab-pointy-89515");
+// mongoose.connect("mongodb://localhost/mongo_scraper");
+mongoose.connect("mongodb://heroku_42k48nrx:bggrrv7f9lokjf56fmecks397v@ds133192.mlab.com:33192/heroku_42k48nrx");
 var db = mongoose.connection;
 
 // Show any mongoose errors
